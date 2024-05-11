@@ -1,6 +1,6 @@
 services:
   yarr:
-    image: versun/yarr
+    image: ghcr.io/versun/yarr
     environment:
       - USERNAME=admin
       - PASSWORD=admin
