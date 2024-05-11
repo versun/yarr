@@ -1,7 +1,12 @@
 services:
   yarr:
     image: ghcr.io/versun/yarr
+    volumes:
+      - ./data:/root/.config/yarr/
+    ports:
+      - 7070:7070
     environment:
       - USERNAME=admin
       - PASSWORD=admin
-    command: ./yarr -auth ${USERNAME}:${PASSWORD}
+    restart: always
+    command: ./yarr -auth $USERNAME:$PASSWORD -addr 0.0.0.0:7070
