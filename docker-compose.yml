@@ -1,0 +1,7 @@
+services:
+  yarr:
+    image: versun/yarr
+    environment:
+      - USERNAME=admin
+      - PASSWORD=admin
+    command: ./yarr -auth ${USERNAME}:${PASSWORD}
